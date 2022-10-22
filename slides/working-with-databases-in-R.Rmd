@@ -1,6 +1,6 @@
 ---
 title: "Working with databases in R"
-subtitle: "Christopher Maronga - R Programmer"
+subtitle: "Christopher Maronga"
 institute: "NHS-R Community"
 output:
   xaringan::moon_reader:
