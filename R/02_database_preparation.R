@@ -1,3 +1,8 @@
+# About this script -------------------------------------------------------
+# Author: Christopher Maronga
+# Purpose: Preparation of RDBMS for NHSR-Conference 2022
+# Date created: 14/10/2022
+
 # Loading packages --------------------------------------------------------
 library(DBI)  # R database interface
 library(odbc)  # connection to odbc compatible database
@@ -17,13 +22,12 @@ lab_results <- read_csv(here("datasets", "lab_results.csv"))
 
 # world
 nycy_con <- dbConnect(MySQL(),
-                       host = "nhsr-conference.cjmn9gy7nffs.us-east-1.rds.amazonaws.com",
+                       host = Sys.getenv("host_name"),
                        dbname = "nycflights13",
-                       user = "admin",
+                       user = Sys.getenv("admin_user"),
                        #port = 3306,
-                       password = "nhsr_2022")
+                       password = Sys.getenv("admin_pwd"))
 
-dbListTables(nycy_con)
 
 # export tables
 # nycflights13::airlines
@@ -66,28 +70,15 @@ dbWriteTable(nycy_con,
              overwrite = T,
              row.names = F)
 
-
-
-nycy_con.ser <- dbConnect(MySQL(),
-                      host = "nhsr-conference.cjmn9gy7nffs.us-east-1.rds.amazonaws.com",
-                      dbname = "nycflights13",
-                      user = "user",
-                      password = "user")
-
-
-# list tables
-dbListTables(nycy_con.ser)
-
-dbListFields(nycy_con.ser, name = "tbl_airlines")
-
+dbListTables(nycy_con)
 
 # creating the nhsr_conference BD -----------------------------------------
 
 nhs_r.con <- dbConnect(MySQL(),
-                      host = "nhsr-conference.cjmn9gy7nffs.us-east-1.rds.amazonaws.com",
+                      host = Sys.getenv("host_name"),
                       dbname = "nhsr_conference",
-                      user = "admin",
-                      password = "nhsr_2022")
+                      user = Sys.getenv("admin_user"),
+                      password = Sys.getenv("admin_pwd"))
 
 
 # baseline data
@@ -106,6 +97,8 @@ dbWriteTable(conn = nhs_r.con,
 
 
 # lab results
+# add additional variables to lab results
+set.seed(20221005)
 lab_results <- lab_results %>% 
   mutate(
     hb = runif(226, min = 9.5, max = 24.5),
@@ -120,7 +113,7 @@ dbWriteTable(conn = nhs_r.con,
              row.names = F)
 
 
-
+dbListTables(nhs_r.con)
 
 
 
