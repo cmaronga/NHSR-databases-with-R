@@ -48,7 +48,6 @@ opts_chunk$set(
 
 
 
-
 class: title-slide, left, bottom
 
 # `r rmarkdown::metadata$title`
@@ -59,3 +58,57 @@ class: title-slide, left, bottom
 
 ---
   
+About me:
+
+- Talk about my education and professional experience
+
+
+---
+Objectives/scope and mode of delivery
+
+- Efficiently connect R to a RDBMS
+- Querying data stored within the RDBMS from within R
+- REDCap and API
+- API security
+- Automation via cron jobs
+
+---
+Background of RDBMS:
+
+- Brief overview and popular RDBMS
+
+
+---
+Background of REDCap:
+
+- Web-based and used within most health research
+
+---
+Ways to connect to RDBMS
+
+- applicable odbc
+- DBI compliant package
+- Using SQL code chunk (rmarkdown) with either options 1 or 2
+
+
+---
+Ways to Query the data:
+
+- Using DBI function
+- dplyr syntax (no need for SQL knowledge, just tidyverse)
+  - Advantages:
+     - Efficiency (computation is pushed to the database)
+     - Memory efficient: collect into R only required dataset
+     - All your code is in R, SQL not necessarily needed
+  
+- Run SQL code chunks in rmarkdwon files
+
+
+
+
+
+
+
+
+
+
