@@ -1,7 +1,7 @@
 ---
 title: "Working with databases in R"
 subtitle: "Christopher Maronga"
-institute: "NHS-R Community"
+institute: "R Programmer - Oxford University"
 output:
   xaringan::moon_reader:
     css: 
@@ -16,7 +16,7 @@ output:
       highlightLines: true
       highlightLanguage: ["r"]
       countIncrementalSlides: false
-      ratio: "16:9"
+      ratio: "4:3"
     includes:
       after_body: [css/insert-logo.html]
 ---
@@ -54,56 +54,164 @@ class: title-slide, left, bottom
 ----
 ## **`r rmarkdown::metadata$subtitle`**
 ### `r rmarkdown::metadata$author`
-### `r rmarkdown::metadata$date`
-
----
-  
-About me:
-
-- Talk about my education and professional experience
+### `r rmarkdown::metadata$institute`
 
 
 ---
-Objectives/scope and mode of delivery
+class: title, left
 
-- Efficiently connect R to a RDBMS
-- Querying data stored within the RDBMS from within R
-- REDCap and API
-- API security
-- Automation via cron jobs
+## Introduction
+
+### Mode of delivery
+
+- As hands-on as possible.
+
+- Live coding of techniques.
+
+--
+
+### Objectives/scope
+
+- Efficiently connect R to databases.
+    - RDBMS (MySQL)
+    - REDCap
+- Querying data stored in databases using R.
+    - RDBMS (MySQL)
+    - REDCap
+- Managing API security.
+
+--
+
+### Extras
+- SQLite database.
+- Automating data extraction.
 
 ---
-Background of RDBMS:
+class: title, left
 
-- Brief overview and popular RDBMS
+## Relational Database Management Systems
+
+- Widely used to store and manage data
+
+
+
+- Data is in tables (relations) composed of rows (tuples) and columns (variables)
+
+
+
+- Tables/relations are inter-related using specific attributes (unique/primary keys)
+
+
+
+- Most of the RDBMS use `SQL` to query and manage data
+
+
+
+- Popular RDBMS include:-
+    - MySQL, SQLite, PostgreSQL, Oracle, MariaDB, Ms Access etc.
 
 
 ---
-Background of REDCap:
+class: title, left
 
-- Web-based and used within most health research
+##  Research Electronic Data Capture (REDCap)
+
+- Secure web application for building and managing online 
+surveys and databases
+
+- Created at Vanderbilt University and can be used to collect virtually
+any kind of data:-
+   - Supports offline data collection (REDCap mobile app)
+   - Online surveys
+   
+- Used by over 6219 institutions, visit [this website](https://www.project-redcap.org/) for more information.
+
+```{r, out.width ="40%",fig.align ='left', out.height = "20%", echo = F, eval=TRUE}
+knitr::include_graphics("redcap_logo.png")
+```
+---
+class: title, left
+
+## Connecting to RDBMS
+
+Two ways you can connect R to a database
+
+- Use applicable odbc driver e.g. `MySQL ODBC 8.0 Unicode Driver`
+
+
+- DBI compliant package e.g. `RMySQL`, `RSQLite`, `ROracle` etc.
+
 
 ---
-Ways to connect to RDBMS
+class: title, left
 
-- applicable odbc
-- DBI compliant package
-- Using SQL code chunk (rmarkdown) with either options 1 or 2
+## Querying data from RDBMS
 
+Three approaches you can query data from a database using R
 
----
-Ways to Query the data:
+- Using DBI functions
 
-- Using DBI function
-- dplyr syntax (no need for SQL knowledge, just tidyverse)
+- `dplyr` syntax
   - Advantages:
      - Efficiency (computation is pushed to the database)
      - Memory efficient: collect into R only required dataset
      - All your code is in R, SQL not necessarily needed
   
-- Run SQL code chunks in rmarkdwon files
+- Using SQL code chunk (rmarkdown) with either options 
+of connecting to a database
+
+---
+class: title, left
+
+## Connecting and querying data from REDCap
+
+There are at least 3 packages I am aware of (`redcapAPI`, `RedcapData` and `REDCapR`).
+We will focus on the firts one (`redcapAPI`)
+
+- Creating a connection
+
+- Export data by event
+
+- Export data by instrument
 
 
+---
+class: title, left
+
+## Managing API security
+
+- This concerns protecting the integrity of the API code
+
+
+- API credentials in the wrong hands is a data breach and can cost your
+organization a fortune.
+
+
+- Care should be taken to manage and secure API tokens and should not
+be put directly in your code
+
+
+- In R, one such way is to keep API keys a secret is via `.Renviron`
+start-up file
+
+
+- **Warning:** Do NOT share codes containing API keys. For GitHub collaborations, be
+sure to include `.Renviron` in `.gitignore` file.
+
+
+---
+## Extras
+
+### SQLite databases
+
+- Light, serverless and portable RDBMS
+- Can be used with RShiny and other data products
+
+### Automating data extraction & processing
+
+- It's possible to automate data extraction workflow
+
+- CRON jobs (ONLY works in linux system), rstudio cloud or server.
 
 
 

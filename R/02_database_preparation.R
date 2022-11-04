@@ -103,7 +103,7 @@ lab_results <- lab_results %>%
   mutate(
     hb = runif(226, min = 9.5, max = 24.5),
     creatinine = runif(226, min = 0.42, max = 0.48)
-  )
+  ) 
 
 
 dbWriteTable(conn = nhs_r.con, 
