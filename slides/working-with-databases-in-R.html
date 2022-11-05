@@ -637,6 +637,230 @@ left: 6px;
   }
 })()
 </script>
+    <script>$(document).ready(function(){
+    if (typeof $('[data-toggle="tooltip"]').tooltip === 'function') {
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+    if ($('[data-toggle="popover"]').popover === 'function') {
+        $('[data-toggle="popover"]').popover();
+    }
+});
+</script>
+    <style type="text/css">
+.lightable-minimal {
+border-collapse: separate;
+border-spacing: 16px 1px;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-minimal td {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal th {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal thead tr:last-child th {
+border-bottom: 2px solid #00000050;
+empty-cells: hide;
+}
+.lightable-minimal tbody tr:first-child td {
+padding-top: 0.5em;
+}
+.lightable-minimal.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-minimal.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic {
+border-top: 0.16em solid #111111;
+border-bottom: 0.16em solid #111111;
+width: 100%;
+margin-bottom: 10px;
+margin: 10px 5px;
+}
+.lightable-classic tfoot tr td {
+border: 0;
+}
+.lightable-classic tfoot tr:first-child td {
+border-top: 0.14em solid #111111;
+}
+.lightable-classic caption {
+color: #222222;
+}
+.lightable-classic td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic thead tr:last-child th {
+border-bottom: 0.10em solid #111111;
+}
+.lightable-classic.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic-2 {
+border-top: 3px double #111111;
+border-bottom: 3px double #111111;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-classic-2 tfoot tr td {
+border: 0;
+}
+.lightable-classic-2 tfoot tr:first-child td {
+border-top: 3px double #111111;
+}
+.lightable-classic-2 caption {
+color: #222222;
+}
+.lightable-classic-2 td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic-2 th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic-2 tbody tr:last-child td {
+border-bottom: 3px double #111111;
+}
+.lightable-classic-2 thead tr:last-child th {
+border-bottom: 1px solid #111111;
+}
+.lightable-classic-2.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic-2.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #EEE;
+border-collapse: collapse;
+margin-bottom: 10px;
+}
+.lightable-material tfoot tr td {
+border: 0;
+}
+.lightable-material tfoot tr:first-child td {
+border-top: 1px solid #EEE;
+}
+.lightable-material th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+}
+.lightable-material td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+border-top: 1px solid #eeeeee;
+}
+.lightable-material.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #ddd;
+}
+.lightable-material-dark {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #FFFFFF12;
+border-collapse: collapse;
+margin-bottom: 10px;
+background-color: #363640;
+}
+.lightable-material-dark tfoot tr td {
+border: 0;
+}
+.lightable-material-dark tfoot tr:first-child td {
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF60;
+}
+.lightable-material-dark td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF;
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark.lightable-hover tbody tr:hover {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody tr:nth-child(even) {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material-dark.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #FFFFFF12;
+}
+.lightable-paper {
+width: 100%;
+margin-bottom: 10px;
+color: #444;
+}
+.lightable-paper tfoot tr td {
+border: 0;
+}
+.lightable-paper tfoot tr:first-child td {
+border-top: 1px solid #00000020;
+}
+.lightable-paper thead tr:last-child th {
+color: #666;
+vertical-align: bottom;
+border-bottom: 1px solid #00000020;
+line-height: 1.15em;
+padding: 10px 5px;
+}
+.lightable-paper td {
+vertical-align: middle;
+border-bottom: 1px solid #00000010;
+line-height: 1.15em;
+padding: 7px 5px;
+}
+.lightable-paper.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-paper.lightable-striped tbody tr:nth-child(even) {
+background-color: #00000008;
+}
+.lightable-paper.lightable-striped tbody td {
+border: 0;
+}
+</style>
     <style type="text/css">a {color: #005EB8;border-bottom: 2px solid #005EB8;line-height: 1.5em;}a:hover {border-bottom: 0px;}.remark-slide-content h1 {color: #005EB8;font-size: 45px;line-height: 1em;}.remark-slide-content h2 {font-size: 35px;color: #005EB8;line-height: 1em;}.remark-slide-content h3 {font-size: 25px;color: #005EB8;}li{line-height: 1.5em;}.remark-slide-content {font-size: 20px;line-height: 1.2em;}hr {content: none;display: block;border: none;background-color: #231F20;height: 0.08em;}.footnote {position: absolute;bottom: 2em;padding-right: 4em;font-size: 80%;line-height: 1.3em;}.remark-slide-number {color: #000000;}.remark-code, .remark-inline-code {font-size: 90%;font-weight: 400;color: #231F20;background: #E8EDEE;border-radius: 3px;padding: 1px 1px 1px 1px;}.remark-code-line-highlighted {background-color: #E8EDEE;}pre {border: none;box-shadow: 2px 2px 2px 2px #eee;padding: 0.1em; background: none !important;overflow-x: auto; border-radius: 1px; }pre code {background: none;font-size: 18px !important;}.remark-slide table {margin: auto;border-top: 1px solid #768692;border-bottom: 1px solid #768692;}.remark-slide table thead th {border-bottom: 1px solid #768692;}.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {background: #E8EDEE;}blockquote {border-left: solid 5px #E8EDEE;padding-left: 1em;}.inverse {background-color: #005EB8;color: #FFFFFF;text-shadow: none;}.inverse h1, .inverse h2, .inverse h3 {color: #FFFFFF;}.inverse hr {background-color: #FFFFFF;}.inverse a {color: white;border-bottom: 2px solid white;}.inverse a:hover {border-bottom: none;}.title-slide {background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNi4wLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMzEyIDUyOC45IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMzEyIDUyOC45OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDp1cmwoI1NWR0lEXzFfKTt9DQoJLnN0MXtmaWxsOnVybCgjU1ZHSURfMDAwMDAxMjQ4NTc0NTU2MDM5MDA0NTE5NzAwMDAwMTQzMjgyMTU1MDk3MjE5Njg1NDRfKTt9DQoJLnN0MntmaWxsOnVybCgjU1ZHSURfMDAwMDAxMzkyOTU1MTI3OTIzNTkyNDc3MzAwMDAwMDQ4Mzk1NDAzMjM5NDM5MTAyNzVfKTt9DQoJLnN0M3tmaWxsOnVybCgjU1ZHSURfMDAwMDAwNTc4NjQ4MDIwMDIzMzYwNTI3MDAwMDAwMDcyMzI0MTkyNTEyNTA5OTE3NDdfKTt9DQoJLnN0NHtmaWxsOnVybCgjU1ZHSURfMDAwMDAxNDY0NjM0NDk5ODA1MTYwMDkwNDAwMDAwMTg0MDk3Njk1ODA2MDM4NjczMTJfKTt9DQoJLnN0NXtmaWxsOnVybCgjU1ZHSURfMDAwMDAxNzMxMjA1NzA1Nzk1ODM5MTA2MTAwMDAwMDYzOTI5MjQ5NjQ0MzQyNjUwMDdfKTt9DQoJLnN0NntmaWxsOiNBRkFGQUY7fQ0KPC9zdHlsZT4NCjxnPg0KCQ0KCQk8bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzFfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjMxMy42NTE3IiB5MT0iOTc2LjI5MiIgeDI9IjMxNC4yNjkzIiB5Mj0iOTc1LjY3NDQiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoNzIxLjA5NCAwIDAgLTQ4Mi45MzcgLTIyNTM2MC4zOTA2IDQ3MTUwNS4xMjUpIj4NCgkJPHN0b3AgIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6I0NDQ0VEMCIvPg0KCQk8c3RvcCAgb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojODQ4NDhDIi8+DQoJPC9saW5lYXJHcmFkaWVudD4NCgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTAzNC42LDMxNS44Yy0xMjMsMC0yMjIuNy02Ni44LTIyMi43LTE0OS4xYzAtODIuNCw5OS43LTE0OS4xLDIyMi43LTE0OS4xYzEyMywwLDIyMi43LDY2LjgsMjIyLjcsMTQ5LjENCgkJQzEyNTcuMywyNDkuMSwxMTU3LjYsMzE1LjgsMTAzNC42LDMxNS44eiBNMTA2OC43LDc1LjljLTkzLjUsMC0xNjkuMyw0NS42LTE2OS4zLDEwMnM3NS44LDEwMiwxNjkuMywxMDINCgkJYzkzLjUsMCwxNjIuNS0zMS4yLDE2Mi41LTEwMkMxMjMxLjIsMTA3LjEsMTE2Mi4yLDc1LjksMTA2OC43LDc1Ljl6Ii8+DQoJDQoJCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMDAwMDAwNDcwNDEyMTM5MjEyMTY2NTc1NTAwMDAwMTUyMDExMjQ5NzUyMzAxNjg0NTlfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjMxMy44ODgyIiB5MT0iOTc2LjM3OTQiIHgyPSIzMTQuNTA1NyIgeTI9Ijk3NS43NjE4IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDM5OCAwIDAgLTQwNi4xMjQgLTEyMzk0Ny40OTIyIDM5NjY1Ny4wNjI1KSI+DQoJCTxzdG9wICBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiMzMzZDQjMiLz4NCgkJPHN0b3AgIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6IzFDNURBOSIvPg0KCTwvbGluZWFyR3JhZGllbnQ+DQoJPHBhdGggc3R5bGU9ImZpbGw6dXJsKCNTVkdJRF8wMDAwMDA0NzA0MTIxMzkyMTIxNjY1NzU1MDAwMDAxNTIwMTEyNDk3NTIzMDE2ODQ1OV8pOyIgZD0iTTExNTEuMSwyNDguNmMwLDAsMTMuNSw0LjEsMjEuMyw4DQoJCWMyLjcsMS40LDcuNCw0LjEsMTAuOCw3LjdjMy4zLDMuNSw0LjksNy4xLDQuOSw3LjFsNTMuMSw4OS42bC04NS44LDBsLTQwLjEtNzUuNGMwLDAtOC4yLTE0LjEtMTMuMy0xOC4yYy00LjItMy40LTYtNC42LTEwLjItNC42DQoJCWMtMi45LDAtMjAuNCwwLTIwLjQsMGwwLDk4LjJsLTc2LDBWMTEwLjJIMTE0OGMwLDAsNjkuNSwxLjMsNjkuNSw2Ny40UzExNTEuMSwyNDguNiwxMTUxLjEsMjQ4LjZ6IE0xMTE4LjEsMTY0LjZsLTQ2LDBsMCw0Mi42DQoJCWw0NiwwYzAsMCwyMS4zLTAuMSwyMS4zLTIxLjdDMTEzOS40LDE2My40LDExMTguMSwxNjQuNiwxMTE4LjEsMTY0LjZ6Ii8+DQo8L2c+DQo8Zz4NCgkNCgkJPGxpbmVhckdyYWRpZW50IGlkPSJTVkdJRF8wMDAwMDE0OTM2MTc0NTc2ODYyMDY5MDk0MDAwMDAwMzE1OTM1NDE3MTk0MDE4Mzk5M18iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iNTcuNzA2OCIgeTE9IjIzNC41NTE5IiB4Mj0iMjk1LjUwNjkiIHkyPSIyMzQuNTUxOSI+DQoJCTxzdG9wICBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiMzMzZDQjMiLz4NCgkJPHN0b3AgIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6IzFDNURBOSIvPg0KCTwvbGluZWFyR3JhZGllbnQ+DQoJPHBhdGggc3R5bGU9ImZpbGw6dXJsKCNTVkdJRF8wMDAwMDE0OTM2MTc0NTc2ODYyMDY5MDk0MDAwMDAwMzE1OTM1NDE3MTk0MDE4Mzk5M18pOyIgZD0iTTI5NS41LDM1OC41aC03Ny43bC04Mi4zLTEyNC43djEyNC43DQoJCUg1Ny43di0yNDhoNzcuN2w4Mi4zLDEyNi44VjExMC42aDc3LjdWMzU4LjV6Ii8+DQoJDQoJCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMDAwMDAwMzg0MTA1ODEzNDI1OTcwMDEwODAwMDAwMTc4NTE1ODM4Njc1NDEzODk3NTZfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjMzMC41MjU1IiB5MT0iMjM0LjU1MTkiIHgyPSI1NTkuOTIwMSIgeTI9IjIzNC41NTE5Ij4NCgkJPHN0b3AgIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6IzMzNkNCMyIvPg0KCQk8c3RvcCAgb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojMUM1REE5Ii8+DQoJPC9saW5lYXJHcmFkaWVudD4NCgk8cGF0aCBzdHlsZT0iZmlsbDp1cmwoI1NWR0lEXzAwMDAwMDM4NDEwNTgxMzQyNTk3MDAxMDgwMDAwMDE3ODUxNTgzODY3NTQxMzg5NzU2Xyk7IiBkPSJNNTU5LjksMTEwLjZ2MjQ4aC03Ny43di05Ni43aC03My45djk2LjcNCgkJaC03Ny43di0yNDhoNzcuN3Y4OS4zaDczLjl2LTg5LjNINTU5Ljl6Ii8+DQoJDQoJCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMDAwMDAwMzgzODA5Mzg5Mzk2NzU5NDQxNzAwMDAwMDUwOTg0NTgwODQ0OTk0MzA1NjBfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjU4Ny45MzQzIiB5MT0iMjMzLjY3NjQiIHgyPSI3ODYuNTA5IiB5Mj0iMjMzLjY3NjQiPg0KCQk8c3RvcCAgb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojMzM2Q0IzIi8+DQoJCTxzdG9wICBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiMxQzVEQTkiLz4NCgk8L2xpbmVhckdyYWRpZW50Pg0KCTxwYXRoIHN0eWxlPSJmaWxsOnVybCgjU1ZHSURfMDAwMDAwMzgzODA5Mzg5Mzk2NzU5NDQxNzAwMDAwMDUwOTg0NTgwODQ0OTk0MzA1NjBfKTsiIGQ9Ik03NzUuNSwzMjMuOWMtNy40LDExLjQtMTgsMjAuNS0zMiwyNy4xDQoJCWMtMTQsNi43LTMwLjcsMTAtNTAuMSwxMGMtMjkuNywwLTU0LjEtNi45LTczLjQtMjAuOGMtMTkuMy0xMy45LTI5LjctMzQuMy0zMS4zLTYxLjFoODIuN2MxLjIsMTQuMiw3LjUsMjEuNCwxOC45LDIxLjQNCgkJYzQsMCw3LjItMS4xLDkuNi0zLjJjMi41LTIuMSwzLjctNS4xLDMuNy05LjFjMC01LjgtMy0xMC40LTguOS0xMy44Yy02LTMuNC0xNS42LTcuMy0yOC45LTExLjdjLTE1LjYtNS4xLTI4LjctMTAuNC0zOS0xNS44DQoJCWMtMTAuNC01LjQtMTkuNC0xMy4zLTI3LjEtMjMuOGMtNy43LTEwLjUtMTEuNi0yNC4yLTExLjYtNDFjMC0xNi4xLDQuMS0yOS44LDEyLjQtNDEuMmM4LjMtMTEuMywxOS42LTE5LjksMzQtMjUuNw0KCQljMTQuNC01LjgsMzAuNS04LjgsNDguNS04LjhjMjkuNiwwLDUzLjIsNi45LDcwLjcsMjAuN2MxNy41LDEzLjgsMjcuMSwzMy42LDI4LjcsNTkuNWgtODMuN2MtMS4yLTEzLjEtNi41LTE5LjYtMTYuMS0xOS42DQoJCWMtMy4zLDAtNiwxLTguMSwzYy0yLjEsMi0zLjIsNS0zLjIsOC45YzAsNS40LDMsOS44LDguOSwxMy4xYzYsMy40LDE1LjIsNy4zLDI3LjgsMTEuN2MxNS45LDUuNiwyOSwxMS4yLDM5LjQsMTYuNg0KCQljMTAuNCw1LjUsMTkuNSwxMy41LDI3LjMsMjQuMmM3LjgsMTAuNiwxMS43LDI0LjIsMTEuNyw0MC44Qzc4Ni41LDI5OS42LDc4Mi44LDMxMi40LDc3NS41LDMyMy45eiIvPg0KPC9nPg0KPGc+DQoJDQoJCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMDAwMDAwODIzMzk5Nzc0MjA2MDU5MTg1NTAwMDAwMDQ1MDg2NjQzNjU0OTE0NTQwODVfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjgyMS45NjA5IiB5MT0iMjM4LjkyMTEiIHgyPSI5NjEuNzYwNyIgeTI9IjIzOC45MjExIj4NCgkJPHN0b3AgIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6IzMzNkNCMyIvPg0KCQk8c3RvcCAgb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojMUM1REE5Ii8+DQoJPC9saW5lYXJHcmFkaWVudD4NCgk8cGF0aCBzdHlsZT0iZmlsbDp1cmwoI1NWR0lEXzAwMDAwMDgyMzM5OTc3NDIwNjA1OTE4NTUwMDAwMDA0NTA4NjY0MzY1NDkxNDU0MDg1Xyk7IiBkPSJNOTYxLjgsMjExLjV2NTQuOUg4MjJ2LTU0LjlIOTYxLjh6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBjbGFzcz0ic3Q2IiBkPSJNMTM2LjIsNDIyLjFjOC4xLDYuNCwxMy41LDE1LDE2LjEsMjUuOWgtMjAuOGMtMi4yLTUuMy01LjUtOS41LTEwLTEyLjZjLTQuNS0zLjEtMTAtNC42LTE2LjMtNC42DQoJCWMtNS4yLDAtMTAsMS4zLTE0LjIsMy45Yy00LjIsMi42LTcuNSw2LjQtOS44LDExLjJjLTIuMyw0LjktMy41LDEwLjYtMy41LDE3LjFjMCw2LjUsMS4yLDEyLjEsMy41LDE3YzIuMyw0LjksNS42LDguNiw5LjgsMTEuMg0KCQljNC4yLDIuNiw4LjksMy45LDE0LjIsMy45YzYuNCwwLDExLjgtMS41LDE2LjMtNC42YzQuNS0zLjEsNy45LTcuMywxMC0xMi42aDIwLjhjLTIuNiwxMC45LTgsMTkuNi0xNi4xLDI1LjkNCgkJYy04LjEsNi40LTE4LjQsOS41LTMwLjcsOS41Yy05LjQsMC0xNy44LTIuMS0yNS02LjRjLTcuMi00LjMtMTIuOS0xMC4yLTE2LjgtMTcuOWMtNC03LjctNi0xNi40LTYtMjYuMWMwLTkuOCwyLTE4LjYsNi0yNi4yDQoJCWM0LTcuNyw5LjYtMTMuNiwxNi44LTE3LjljNy4yLTQuMywxNS42LTYuNCwyNS4xLTYuNEMxMTcuOSw0MTIuNiwxMjguMSw0MTUuOCwxMzYuMiw0MjIuMXoiLz4NCgk8cGF0aCBjbGFzcz0ic3Q2IiBkPSJNMjgwLjksNDE4LjZjNy41LDQuMywxMy41LDEwLjMsMTcuOCwxOGM0LjMsNy43LDYuNSwxNi40LDYuNSwyNi4yYzAsOS43LTIuMiwxOC41LTYuNSwyNi4yDQoJCWMtNC4zLDcuOC0xMC4zLDEzLjgtMTcuOCwxOC4xYy03LjUsNC4zLTE1LjksNi41LTI1LjIsNi41Yy05LjMsMC0xNy42LTIuMS0yNS4yLTYuNWMtNy41LTQuMy0xMy41LTEwLjMtMTcuOC0xOC4xDQoJCWMtNC4zLTcuOC02LjUtMTYuNS02LjUtMjYuMmMwLTkuNywyLjItMTguNCw2LjUtMjYuMmM0LjMtNy43LDEwLjMtMTMuNywxNy44LTE4YzcuNS00LjMsMTUuOS02LjUsMjUuMi02LjUNCgkJQzI2NSw0MTIuMiwyNzMuNCw0MTQuMywyODAuOSw0MTguNnogTTI0MC40LDQzNC4zYy00LjQsMi42LTcuOCw2LjQtMTAuMywxMS4zYy0yLjUsNC45LTMuNywxMC42LTMuNywxNy4yYzAsNi41LDEuMiwxMi4zLDMuNywxNy4yDQoJCWMyLjUsNC45LDUuOSw4LjcsMTAuMywxMS4zYzQuNCwyLjYsOS41LDMuOSwxNS4zLDMuOWM1LjgsMCwxMC45LTEuMywxNS4zLTMuOWM0LjQtMi42LDcuOC02LjQsMTAuMy0xMS4zDQoJCWMyLjUtNC45LDMuNy0xMC42LDMuNy0xNy4yYzAtNi41LTEuMi0xMi4zLTMuNy0xNy4yYy0yLjUtNC45LTUuOS04LjctMTAuMy0xMS4zYy00LjQtMi42LTkuNS0zLjktMTUuMy0zLjkNCgkJQzI0OS45LDQzMC40LDI0NC44LDQzMS43LDI0MC40LDQzNC4zeiIvPg0KCTxwYXRoIGNsYXNzPSJzdDYiIGQ9Ik00NjguOSw0MTQuN3Y5Ny45aC0xOS42di02OC4zbC0yNS4xLDY4LjNINDA3bC0yNS4xLTY4djY4aC0xOS44di05Ny45aDI0bDI5LjcsNzMuNmwyOS4yLTczLjZINDY4Ljl6Ii8+DQoJPHBhdGggY2xhc3M9InN0NiIgZD0iTTYzNS42LDQxNC43djk3LjlINjE2di02OC4zbC0yNS4xLDY4LjNoLTE3LjFsLTI1LjEtNjh2NjhoLTE5Ljh2LTk3LjloMjRsMjkuNyw3My42bDI5LjItNzMuNkg2MzUuNnoiLz4NCgk8cGF0aCBjbGFzcz0ic3Q2IiBkPSJNNzE0LjcsNDEzLjZ2NTguMWMwLDcuOCwxLjcsMTMuNiw1LjEsMTcuNWMzLjQsMy45LDguMyw1LjgsMTQuOCw1LjhjNi40LDAsMTEuMi0xLjksMTQuNy01LjgNCgkJYzMuNC0zLjksNS4xLTkuNyw1LjEtMTcuNXYtNTguMWgxOS42djU4LjFjMCw5LjItMS43LDE2LjktNS4xLDIzLjJjLTMuNCw2LjMtOC4xLDExLTE0LjIsMTQuMWMtNiwzLjEtMTIuOSw0LjYtMjAuNSw0LjYNCgkJYy0xMS45LDAtMjEuNC0zLjYtMjguNS0xMC43Yy03LjEtNy4xLTEwLjctMTcuNS0xMC43LTMxLjN2LTU4LjFINzE0Ljd6Ii8+DQoJPHBhdGggY2xhc3M9InN0NiIgZD0iTTkxNy40LDUxMi42aC0xOS44bC00NC4zLTY3LjN2NjcuM2gtMTkuOHYtOTloMTkuOGw0NC4zLDY3Ljl2LTY3LjloMTkuOFY1MTIuNnoiLz4NCgk8cGF0aCBjbGFzcz0ic3Q2IiBkPSJNOTk3LjIsNDEzLjZ2OTloLTE5Ljh2LTk5SDk5Ny4yeiIvPg0KCTxwYXRoIGNsYXNzPSJzdDYiIGQ9Ik0xMTI0LjUsNDEzLjZ2MTUuN2gtMjcuM3Y4My4zaC0xOS44di04My4zaC0yNy4ydi0xNS43SDExMjQuNXoiLz4NCgk8cGF0aCBjbGFzcz0ic3Q2IiBkPSJNMTI1Ny4zLDQxMy42bC0zMy41LDY0LjR2MzQuNmgtMTkuOXYtMzQuNmwtMzMuNy02NC40aDIyLjdsMjEsNDMuM2wyMS00My4zSDEyNTcuM3oiLz4NCjwvZz4NCjwvc3ZnPg0K);background-position: 95% 10%;background-size: 400px;}.title-slide h1 {color: #000000;}.title-slide .remark-slide-number {display: none;}.blue { color: #005EB8 }.green { color: #009639 }.pink { color: #AE2573 }.red { color: #DA291C }.warmyellow { color: #FFB81C }.black { color: #000000 }.darkgrey { color: #A9A9A9 }img.center{display: block;margin: 0 auto;}}</style>
     <style type="text/css">@font-face {
 font-family: 'Roboto Mono';
@@ -676,14 +900,45 @@ class: title, left
 
 ## Introduction
 
-### Mode of delivery
-
-- As hands-on as possible.
-
-- Live coding of techniques.
-
 --
 
+### Mode of delivery
+
+&lt;table class=&quot;table&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Session &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Topic &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Duration &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Session One &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; RDBMS &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; 1hr 45 mins &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Session Two &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; REDCap &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; 1hr &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Session Three &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; API security &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; 45 minutes &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+&lt;!-- - As hands-on as possible. --&gt;
+
+&lt;!-- - Live coding of techniques. --&gt;
+
+--
+.pull-left[
 ### Objectives/scope
 
 - Efficiently connect R to databases.
@@ -694,16 +949,64 @@ class: title, left
     - REDCap
 - Managing API security.
 
+]
 --
 
+.pull-right[
 ### Extras
 - SQLite database.
 - Automating data extraction.
+]
+
+
+---
+class: title, center, middle
+
+# Session One(1) -  RDBMS
+
+
+&lt;table class=&quot;table&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Session &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Duration &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Topic &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Slides and demo &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; xxx mins &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Connecting to a database &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Exercise 1 &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; xx mins &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Slides and demo &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; xxx mins &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Querying data from a database &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Exercise 2 &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; xxx mins &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Break &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; xxx mins &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
 
 ---
 class: title, left
 
-## Relational Database Management Systems
+## Introduction to RDBMS
 
 - Widely used to store and manage data
 
@@ -728,8 +1031,147 @@ class: title, left
 ---
 class: title, left
 
-##  Research Electronic Data Capture (REDCap)
+## RDBMS: Creating a connection
 
+Two ways you can connect R to a database
+
+--
+
+- **Use applicable odbc driver e.g. `MySQL`**
+
+
+```r
+*connection_name &lt;- dbConnect(odbc(),
+*                            Driver = &quot; &quot;,   # Specify driver name
+*                            Server = &quot; &quot;,   # Server address
+*                            Database = &quot; &quot;, # Database name
+*                            Uid = &quot; &quot;,      # User identification
+*                            Pwd = &quot; &quot; )     # User password
+```
+
+--
+
+- **DBI compliant package e.g. `RMySQL`, `RSQLite`, `ROracle` etc.**
+
+
+```r
+*connection_name &lt;- dbConnect(MySQL(),  # DBI compliant driver
+*                      host = &quot; &quot;,     # host name/server address
+*                      dbname = &quot; &quot;,   # database name
+*                      user = &quot; &quot;,     # user name
+*                      password = &quot; &quot;) # password
+```
+
+
+
+---
+class: title, left
+
+## RDBMS: Querying data
+
+Three approaches you can query data from a database using R
+
+--
+- **Using DBI functions**
+
+`dbSendQuery()` and `dbFetch()`
+
+
+```r
+# Step 1
+*qry_results &lt;- dbSendQuery(conn = connection_name,
+*           statement = &quot;SELECT * FROM ...&quot;)
+
+# Step 2
+*qry_data &lt;- dbFetch(res = qry_results)
+```
+
+--
+
+`dbGetQuery()`
+  
+
+```r
+*qry_data &lt;- dbGetQuery(conn = connection_name,
+*                   statement = &quot;SELECT * FROM ...&quot;)
+```
+ 
+
+---
+class: title, left
+
+## RDBMS: Querying data
+
+- **Using `dplyr` syntax**
+
+`tbl()`, `show_query()` and `collect()`
+
+
+```r
+*qry_data &lt;- tbl(connection_name, &quot;table_name&quot;) %&gt;%
+* filter(sex == 1) %&gt;%
+* select(subjid, dob, site) %&gt;%
+* arrange(subjid, dob)
+```
+ 
+--
+
+- Advantages of `dplyr` syntax
+     - Efficiency (computation is pushed to the database)
+     - Memory efficient: `collect` into R only required dataset
+     - All your code is in R language, SQL not necessarily needed
+
+--
+
+- **Using SQL code chunk in rmarkdown **
+````markdown
+```{sql, connection = &quot;connection_name&quot;, output.var = &quot;qry_data&quot;}
+SELECT * FROM tbl_lab
+WHERE hb &lt;= 18 AND sex = 1
+```
+````
+
+
+---
+class: title, center, middle
+
+# Session Two(2) -  REDCap
+
+&lt;table class=&quot;table&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Session &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Duration &lt;/th&gt;
+   &lt;th style=&quot;text-align:left;&quot;&gt; Topic &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Slides and demo &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; xxx mins &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Connecting &amp;amp; querying a database &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; Exercise 3 &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt; xx mins &lt;/td&gt;
+   &lt;td style=&quot;text-align:left;&quot;&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+---
+class: title, left
+
+##  Introduction to REDCap
+
+.left-column[
+&lt;img src=&quot;data:image/png;base64,#redcap_logo.png&quot; width=&quot;100%&quot; height=&quot;20%&quot; style=&quot;display: block; margin: auto auto auto 0;&quot; /&gt;
+
+]
+
+.right-column[
 - Secure web application for building and managing online 
 surveys and databases
 
@@ -739,52 +1181,49 @@ any kind of data:-
    - Online surveys
    
 - Used by over 6219 institutions, visit [this website](https://www.project-redcap.org/) for more information.
+]
 
-&lt;img src=&quot;data:image/png;base64,#redcap_logo.png&quot; width=&quot;40%&quot; height=&quot;20%&quot; style=&quot;display: block; margin: auto auto auto 0;&quot; /&gt;
----
-class: title, left
-
-## Connecting to RDBMS
-
-Two ways you can connect R to a database
-
-- Use applicable odbc driver e.g. `MySQL ODBC 8.0 Unicode Driver`
-
-
-- DBI compliant package e.g. `RMySQL`, `RSQLite`, `ROracle` etc.
 
 
 ---
 class: title, left
 
-## Querying data from RDBMS
-
-Three approaches you can query data from a database using R
-
-- Using DBI functions
-
-- `dplyr` syntax
-  - Advantages:
-     - Efficiency (computation is pushed to the database)
-     - Memory efficient: collect into R only required dataset
-     - All your code is in R, SQL not necessarily needed
-  
-- Using SQL code chunk (rmarkdown) with either options 
-of connecting to a database
-
----
-class: title, left
-
-## Connecting and querying data from REDCap
+## REDCap: Connecting and Querying data
 
 There are at least 3 packages I am aware of (`redcapAPI`, `RedcapData` and `REDCapR`).
 We will focus on the firts one (`redcapAPI`)
 
-- Creating a connection
+- **Creating a connection**
 
-- Export data by event
 
-- Export data by instrument
+```r
+connection_name &lt;- redcapConnection(url = &quot;https://uat.chainnetwork.org/redcap/api/&quot;,
+                               token = &quot;125AAA97191E444C80E5A796C40F1E52&quot;)          # Establish connection with REDCap
+```
+
+--
+
+- **Export data by event**
+
+```r
+baseline &lt;- exportRecords(rcon = connection_name, factors = TRUE, fields = NULL,  forms = NULL, records = NULL, events = &quot;event_name&quot;,
+                          labels = TRUE, dates = TRUE, survey = TRUE, dag = TRUE,  checkboxLabels = FALSE)
+```
+
+--
+
+- **Export data by instrument**
+
+```r
+baseline &lt;- exportRecords(rcon = connection_name, factors = TRUE, fields = NULL,  forms = &quot;instrument_name&quot;, records = NULL, events = NULL,
+                          labels = TRUE, dates = TRUE, survey = TRUE, dag = TRUE,  checkboxLabels = FALSE)
+```
+
+
+---
+class: title, center, middle
+
+# Session Three(3) -  API security
 
 
 ---
