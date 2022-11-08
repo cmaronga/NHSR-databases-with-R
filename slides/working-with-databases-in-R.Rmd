@@ -163,10 +163,11 @@ Two ways you can connect R to a database
 
 --
 
-- **Use applicable odbc driver e.g. `MySQL`**
+- **Use applicable odbc driver e.g. `MySQL`,`SQL`**
 
 ```{r, echo = T}
-connection_name <- dbConnect(odbc(), #<<
+# Mostly for commercial databases
+connection_name <- dbConnect(odbc(),         # Open a database connection #<<
                              Driver = " ",   # Specify driver name #<<
                              Server = " ",   # Server address #<<
                              Database = " ", # Database name #<<
@@ -178,8 +179,10 @@ connection_name <- dbConnect(odbc(), #<<
 
 - **DBI compliant package e.g. `RMySQL`, `RSQLite`, `ROracle` etc.**
 
+`DBI` package is the main bridge to communicating with databases.
+
 ```{r, echo = T}
-connection_name <- dbConnect(MySQL(),  # DBI compliant driver #<<
+connection_name <- dbConnect(MySQL(),  # DBI compliant driver for MySQL db #<<
                        host = " ",     # host name/server address #<<
                        dbname = " ",   # database name #<<
                        user = " ",     # user name #<<
@@ -197,6 +200,7 @@ Three approaches you can query data from a database using R
 
 --
 - **Using DBI functions**
+
 
 `dbSendQuery()` and `dbFetch()`
 
@@ -239,8 +243,10 @@ qry_data <- tbl(connection_name, "table_name") %>%  #<<
 
 - Advantages of `dplyr` syntax
      - Efficiency (computation is pushed to the database)
-     - Memory efficient: `collect` into R only required dataset
-     - All your code is in R language, SQL not necessarily needed
+     - Consistent functions (verbs) that can be translated into SQL queries.
+     - Interact directly with the database using R.
+     - Memory efficient: `collect` into R only required dataset (lazy evaluation)
+     
 
 --
 
