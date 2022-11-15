@@ -1,0 +1,42 @@
+---
+title: "Working with databases in R - Solution to exercise"  
+author: "Christopher Maronga - R Programmer " 
+date: "`r format(Sys.Date(), '%A, %d %B %Y')`  "
+output:
+  prettydoc::html_pretty:
+    theme: hpstr
+    highlight: github
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T,
+                      message = F,
+                      warning = F,
+                      eval = F)
+```
+
+## Introduction
+
+Thank you for planning to attend our upcoming meet up to learn how you can work with databases in R. This meetup is a collaboration between R user groups `NairobiR` and `Rladies Nairobi`. To get started and make sure you are able to follow along during the talk, we would advise you to install in advance the following list of packages that we will be working with.
+
+- `tidyverse`
+- `DBI` 
+- `odbc` 
+- `RMySQL`
+- `RSQLite`
+- `REDCapR`
+- `redcapAPI`
+
+You can install a package by running following code in your R console, `install.packages("package_name")`. For instance, if you want to install `tidyverse`, you could just run `install.packages("tidyverse")`.
+
+You could also copy, paste and run the code below to install and load all the above packages.
+
+
+
+
+
+
+
+
+
