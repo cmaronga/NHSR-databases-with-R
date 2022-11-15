@@ -1,13 +1,12 @@
 ---
-title: "Working with databases in R - Solution to exercise"  
-author: "Christopher Maronga - R Programmer " 
-date: "`r format(Sys.Date(), '%A, %d %B %Y')`  "
+title: "Solution to Exercise 3"
+author: "Christopher Maronga - R Programmer"
 output:
   prettydoc::html_pretty:
-    theme: hpstr
-    highlight: github
+    theme: leonids
+    highlight: vignette
+    number_sections: no
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = T,
@@ -18,19 +17,76 @@ knitr::opts_chunk$set(echo = T,
 
 ## Introduction
 
-Thank you for planning to attend our upcoming meet up to learn how you can work with databases in R. This meetup is a collaboration between R user groups `NairobiR` and `Rladies Nairobi`. To get started and make sure you are able to follow along during the talk, we would advise you to install in advance the following list of packages that we will be working with.
+Welcome to part two of the exercises, connecting to `REDCap`. Objectives of the exercise:-
 
-- `tidyverse`
-- `DBI` 
-- `odbc` 
-- `RMySQL`
-- `RSQLite`
-- `REDCapR`
-- `redcapAPI`
+- Connecting `R` and `REDCap` using an `API`
+- Exporting data from `REDCap`
+      - `All` records at a go.
+      - Records by `event`
+      - Records by `instrument/form`
 
-You can install a package by running following code in your R console, `install.packages("package_name")`. For instance, if you want to install `tidyverse`, you could just run `install.packages("tidyverse")`.
+We have set up `one` REDCap database to use in this exercise. Below are the details to connect to the database.
 
-You could also copy, paste and run the code below to install and load all the above packages.
+(i) Database link :`https://uat.chainnetwork.org/`
+      - **url** : `https://uat.chainnetwork.org/redcap/api/`
+      - **API token** : `125AAA97191E444C80E5A796C40F1E52`
+
+
+**NOTE:** You only need two parametres to connect to a REDCap database, the `url link `and the API `token/code`
+
+  
+## Load packages
+
+Load packages you need to connect, extract and wrangle data from your databases
+
+```{r}
+# loading packages
+```
+
+
+
+
+## `r kableExtra::text_spec("Question one - Create a connection", color = "steelblue")`
+
+
+### Exploring the database
+
+
+
+
+##  `r kableExtra::text_spec("Question two - Export data", color = "steelblue")`
+
+
+
+### All data at a go
+
+
+
+### Export data by event
+
+
+
+### Export data by instrument/form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
