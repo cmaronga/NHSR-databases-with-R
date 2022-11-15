@@ -13,7 +13,7 @@
 <meta name="author" content="Christopher Maronga - R Programmer" />
 
 
-<title>Solution to Exercise 3</title>
+<title>Solution to Exercise 1 &amp; 2</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -155,7 +155,7 @@ code span.er { color: #a61717; background-color: #e3d2d2; }
 <div class="col s12 m3">
 <div class="table cover">
 <div class="cover-card table-cell table-middle">
-<span class="author_name">Solution to Exercise 3</span>
+<span class="author_name">Solution to Exercise 1 &amp; 2</span>
 <span class="author_bio mbm">Christopher Maronga - R Programmer</span>
 </div>
 </div>
@@ -169,29 +169,44 @@ code span.er { color: #a61717; background-color: #e3d2d2; }
 <article class="post-content">
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>Welcome to part two of the exercises, connecting to
-<code>REDCap</code>. Objectives of the exercise:-</p>
+<p>Welcome to part one of the exercises, connecting to
+<code>RDBMS</code>. This is short exercise with the following
+objectives:-</p>
 <ul>
-<li>Connecting <code>R</code> and <code>REDCap</code> using an
-<code>API</code></li>
-<li>Exporting data from <code>REDCap</code> - <code>All</code> records
-at a go. - Records by <code>event</code> - Records by
-<code>instrument/form</code></li>
+<li>Connecting to a <code>MySQL</code> database using <code>odbc</code>
+driver.</li>
+<li>Connecting to a <code>MySQL</code> database using a <code>DBI</code>
+back-end package</li>
+<li>Exploring database contents using the established connection.</li>
 </ul>
-<p>We have set up <code>one</code> REDCap database to use in this
-exercise. Below are the details to connect to the database.</p>
+<p>We have set-up 3 <code>MySQL</code> databases for use in this
+exercise and subsequent exercises throughout the workshop. Below are the
+names and credentials of the databases to connect to</p>
 <ol style="list-style-type: lower-roman">
-<li>Database link :<code>https://uat.chainnetwork.org/</code>
+<li>Database name :<code>nhsr_conference</code>
 <ul>
-<li><strong>url</strong> :
-<code>https://uat.chainnetwork.org/redcap/api/</code></li>
-<li><strong>API token</strong> :
-<code>125AAA97191E444C80E5A796C40F1E52</code></li>
+<li><strong>host/server</strong> :
+<code>nhsr-conference.cjmn9gy7nffs.us-east-1.rds.amazonaws.com</code></li>
+<li><strong>user/Uid</strong> : <code>user</code></li>
+<li><strong>Password</strong> : <code>user</code></li>
+</ul></li>
+<li>Database name :<code>nycflights13</code>
+<ul>
+<li><strong>host/server</strong> :
+<code>nhsr-conference.cjmn9gy7nffs.us-east-1.rds.amazonaws.com</code></li>
+<li><strong>user/Uid</strong> : <code>user</code></li>
+<li><strong>Password</strong> : <code>user</code></li>
+</ul></li>
+<li>Database name :<code>SUCE</code>
+<ul>
+<li><strong>host/server</strong> : <code>109.74.194.173</code></li>
+<li><strong>user/Uid</strong> : <code>opendata</code></li>
+<li><strong>Password</strong> : <code>letmein</code></li>
 </ul></li>
 </ol>
-<p><strong>NOTE:</strong> You only need two parametres to connect to a
-REDCap database, the <code>url link</code>and the API
-<code>token/code</code></p>
+<p><strong>NOTE:</strong> In connecting to databases, sometimes it’s
+necessary to specify a <code>port</code>, if that’s the case during this
+exercises, kindly specify <code>port = 3306</code></p>
 </div>
 <div id="load-packages" class="section level2">
 <h2>Load packages</h2>
@@ -199,24 +214,30 @@ REDCap database, the <code>url link</code>and the API
 databases</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading packages</span></span></code></pre></div>
 </div>
-<div id="question-one---create-a-connection" class="section level2">
+<div id="question-one---connecting-to-a-database" class="section level2">
 <h2><span style="     color: steelblue !important;">Question one -
-Create a connection</span></h2>
-<div id="exploring-the-database" class="section level3">
-<h3>Exploring the database</h3>
+Connecting to a database</span></h2>
+<div id="using-an-odbc-driver" class="section level3">
+<h3>Using an <code>odbc</code> driver</h3>
+</div>
+<div id="using-a-dbi-backend-package" class="section level3">
+<h3>Using a <code>DBI</code> backend package</h3>
+</div>
+<div id="exploring-using-the-connections" class="section level3">
+<h3>Exploring using the connections</h3>
 </div>
 </div>
-<div id="question-two---export-data" class="section level2">
+<div id="question-two---extracting-data-from-a-database" class="section level2">
 <h2><span style="     color: steelblue !important;">Question two -
-Export data</span></h2>
-<div id="all-data-at-a-go" class="section level3">
-<h3>All data at a go</h3>
+Extracting data from a database</span></h2>
+<div id="using-dbi-functions" class="section level3">
+<h3>Using <code>DBI</code> functions</h3>
 </div>
-<div id="export-data-by-event" class="section level3">
-<h3>Export data by event</h3>
+<div id="using-dplyr-syntax" class="section level3">
+<h3>Using <code>dplyr</code> syntax</h3>
 </div>
-<div id="export-data-by-instrumentform" class="section level3">
-<h3>Export data by instrument/form</h3>
+<div id="using-a-sql-chunck" class="section level3">
+<h3>Using a <code>SQL</code> chunck</h3>
 </div>
 </div>
 </article>
