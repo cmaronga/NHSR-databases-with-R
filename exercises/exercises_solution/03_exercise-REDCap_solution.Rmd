@@ -1,0 +1,98 @@
+---
+title: "Solution to Exercise 3"
+author: "Christopher Maronga - R Programmer"
+output:
+  prettydoc::html_pretty:
+    theme: leonids
+    highlight: vignette
+    number_sections: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T,
+                      message = F,
+                      warning = F,
+                      eval = F)
+```
+
+## Introduction
+
+Welcome to part two of the exercises, connecting to `REDCap`. Objectives of the exercise:-
+
+- Connecting `R` and `REDCap` using an `API`
+- Exporting data from `REDCap`
+      - `All` records at a go.
+      - Records by `event`
+      - Records by `instrument/form`
+
+We have set up `one` REDCap database to use in this exercise. Below are the details to connect to the database.
+
+(i) Database link :`https://uat.chainnetwork.org/`
+      - **url** : `https://uat.chainnetwork.org/redcap/api/`
+      - **API token** : `125AAA97191E444C80E5A796C40F1E52`
+
+
+**NOTE:** You only need two parametres to connect to a REDCap database, the `url link `and the API `token/code`
+
+  
+## Load packages
+
+Load packages you need to connect, extract and wrangle data from your databases
+
+```{r}
+# loading packages
+```
+
+
+
+
+## `r kableExtra::text_spec("Question one - Create a connection", color = "steelblue")`
+
+
+### Exploring the database
+
+
+
+
+##  `r kableExtra::text_spec("Question two - Export data", color = "steelblue")`
+
+
+
+### All data at a go
+
+
+
+### Export data by event
+
+
+
+### Export data by instrument/form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

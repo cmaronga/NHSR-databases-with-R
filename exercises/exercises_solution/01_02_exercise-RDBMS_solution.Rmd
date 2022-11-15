@@ -1,0 +1,113 @@
+---
+title: "Solution to Exercise 1 & 2"
+author: "Christopher Maronga - R Programmer"
+output:
+  prettydoc::html_pretty:
+    theme: leonids
+    highlight: vignette
+    number_sections: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T,
+                      message = F,
+                      warning = F,
+                      eval = F)
+```
+
+## Introduction
+
+Welcome to part one of the exercises, connecting to `RDBMS`. This is short exercise with the following objectives:-
+
+- Connecting to a `MySQL` database using `odbc` driver.
+- Connecting to a `MySQL` database using a `DBI` back-end package
+- Exploring database contents using the established connection.
+
+We have set-up 3 `MySQL` databases for use in this exercise and subsequent exercises throughout the workshop. Below are the names and credentials of the databases to connect to
+
+(i) Database name :`nhsr_conference`
+      - **host/server** : `nhsr-conference.cjmn9gy7nffs.us-east-1.rds.amazonaws.com`
+      - **user/Uid** : `user`
+      - **Password** : `user`
+
+(ii) Database name :`nycflights13`
+      - **host/server** : `nhsr-conference.cjmn9gy7nffs.us-east-1.rds.amazonaws.com`
+      - **user/Uid** : `user`
+      - **Password** : `user`
+
+(ii) Database name :`SUCE`
+      - **host/server** : `109.74.194.173`
+      - **user/Uid** : `opendata`
+      - **Password** : `letmein`
+
+**NOTE:** In connecting to databases, sometimes it's necessary to specify a `port`, if that's the case during this exercises, kindly specify `port = 3306`
+
+  
+## Load packages
+
+Load packages you need to connect, extract and wrangle data from your databases
+
+```{r}
+# loading packages
+```
+
+
+
+
+## `r kableExtra::text_spec("Question one - Connecting to a database", color = "steelblue")`
+
+
+### Using an `odbc` driver
+
+
+
+### Using a `DBI` backend package
+
+
+### Exploring using the connections
+
+
+
+
+##  `r kableExtra::text_spec("Question two - Extracting data from a database", color = "steelblue")`
+
+
+
+### Using `DBI` functions
+
+
+
+### Using `dplyr` syntax
+
+
+
+### Using a `SQL` chunck
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
