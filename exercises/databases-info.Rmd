@@ -1,0 +1,76 @@
+---
+title: "Databases credentials and information"
+author: "Christopher Maronga - R Programmer"
+output:
+  prettydoc::html_pretty:
+    theme: leonids
+    highlight: vignette
+    number_sections: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T,
+                      message = F,
+                      warning = F,
+                      eval = F)
+```
+
+## Introduction
+
+### MySQL Databases
+
+I have set-up 3 `MySQL` databases for use in the exercises throughout the workshop. Below are the names and credentials of the databases to connect to
+
+(i) Database name :`nhsr_conference`
+      - **host/server** : `nhsr-conference.cjmn9gy7nffs.us-east-1.rds.amazonaws.com`
+      - **user/Uid** : `user`
+      - **Password** : `user`
+
+(ii) Database name :`nycflights13`
+      - **host/server** : `nhsr-conference.cjmn9gy7nffs.us-east-1.rds.amazonaws.com`
+      - **user/Uid** : `user`
+      - **Password** : `user`
+
+(ii) Database name :`SUCE`
+      - **host/server** : `109.74.194.173`
+      - **user/Uid** : `opendata`
+      - **Password** : `letmein`
+
+**NOTE:** In connecting to databases, sometimes it's necessary to specify a `port`, if that's the case during this exercises, kindly specify `port = 3306`
+
+### REDCap Database
+
+I have set up one `REDCap` database for use in this section. Below are the details to connect to the database.
+
+(i) Database link :`https://uat.chainnetwork.org/`
+      - **url** : `https://uat.chainnetwork.org/redcap/api/`
+      - **API token** : `125AAA97191E444C80E5A796C40F1E52`
+
+
+**NOTE:** To connect to a `REDCap` database, you ONLY need two things, the `url` and the `API token`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
