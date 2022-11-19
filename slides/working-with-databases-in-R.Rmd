@@ -117,11 +117,12 @@ class: title, center, middle
 ```{r, echo=FALSE, warning=F, message=F, eval=TRUE}
 session_one <- tribble(
   ~Session,  ~Duration, ~ Topic,
-  "Slides and demo",     "xxx mins", "Connecting to a database",
-  "Exercise 1",      "xx mins", " ",
-  "Slides and demo",  "xxx mins", "Querying data from a database",
-  "Exercise 2",  "xxx mins", " ",
-  "Break",  "xxx mins", " "
+  "Slides and demo",     "25 mins", "Connecting to a database",
+  "Exercise 1",      "10 mins", " ",
+  "Break", "5 mins", " ",
+  "Slides and demo",  "45 mins", "Querying data from a database",
+  "Exercise 2",  "15 mins", " ",
+  "Break",  "5 mins", " "
 )
 
 session_one %>% kbl() %>% 
@@ -267,8 +268,9 @@ class: title, center, middle
 ```{r, echo=FALSE, warning=F, message=F, eval=TRUE}
 session_two <- tribble(
   ~Session,  ~Duration, ~ Topic,
-  "Slides and demo",     "xxx mins", "Connecting & querying a database",
-  "Exercise 3",      "xx mins", " "
+  "Slides and demo",     "45 mins", "Connecting & querying a database",
+  "Exercise 3",      "10 mins", " ",
+  "Break",      "5 mins", " "
 )
 
 session_two %>% kbl() %>% 
