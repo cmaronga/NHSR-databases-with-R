@@ -158,7 +158,7 @@ class: title, left
 ---
 class: title, left
 
-## RDBMS: Creating a connection
+## RDBMS: Creating and exploring connection
 
 Two ways you can connect R to a database
 
