@@ -41,6 +41,7 @@ sort(unique(odbcListDrivers()[[1]])) # Run this to see available odbc drivers
 
 # How many tables are in the connection `nyc_odbc.conn`?
 
+
 # How many tables are in the connection `nyc_dbi.conn`?
 
 

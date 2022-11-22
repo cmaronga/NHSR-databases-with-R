@@ -15,6 +15,7 @@ library(redcapAPI)  # Connecting to REDCap database
 
 
 # Task : Establish a connection to `nhsr_conference` database and use it to
+# Use any method to connect to the database
 # complete the below tasks.
 
 ## ------------- A
@@ -39,10 +40,10 @@ library(redcapAPI)  # Connecting to REDCap database
 
 # use the tbl() function and collect() to complete the set of exercise below
 
-# (i) Extract the lab data and assign it to `lab_data` in your enviroment
+# (i) Extract the lab data (`tbl_lab`) and assign it to `lab_data` in your enviroment
 
 
-# (ii) Extract patients whose gender == 1 and site == 3, assign to `site1_male.df`
+# (ii) Extract from `tbl_baseline` patients whose sex == 1 and site == 3, assign to `site1_male.df`
 
 
 # (iii) Use an appropriate join to extract and combine all tables of the database, assign to `study_raw`
