@@ -41,6 +41,13 @@ Load packages you need to connect, extract and wrangle data from your databases
 
 ```{r}
 # loading packages
+library(DBI)        # Main database interface for R
+library(dbplyr)     # Handles dplyr translation to SQL
+library(tidyverse)  # tidyverse world of package (including dplyr, ggplot2, etc.)
+library(RSQLite)    # DBI back-end package for connecting to SQLite
+library(odbc)       # DBI back-end  to connect to most RDBMS & SQL server
+library(RMySQL)     # DBI back-end package for connecting to MySQL
+library(redcapAPI)  # Connecting to REDCap database
 ```
 
 
@@ -48,28 +55,122 @@ Load packages you need to connect, extract and wrangle data from your databases
 
 ## `r kableExtra::text_spec("Question one - Create a connection", color = "steelblue")`
 
+```{r}
+# create/establish a connection
+redcap_conn <- connection_name <- redcapConnection(url = "https://uat.chainnetwork.org/redcap/api/", # url
+                               token = "125AAA97191E444C80E5A796C40F1E52")  # token
+```
 
 ### Exploring the database
 
+You can use the connection to explore the databse further
 
+```{r}
+# how many events and names?
+events <- exportEvents(redcap_conn) # these are just timepoints
+
+# how many instruments and names?
+instruments <- exportInstruments(redcap_conn)
+
+# users and privileges?
+
+
+# metadata?
+
+```
 
 
 ##  `r kableExtra::text_spec("Question two - Export data", color = "steelblue")`
 
 
-
 ### All data at a go
 
+```{r}
+# This approach for a small study, huge data will time-out connection
+
+clinical_data <- exportRecords(rcon = redcap_conn, 
+                               factors = TRUE)
+
+# Can you sport the difference?
+clinical_data <- exportRecords(rcon = redcap_conn, 
+                               factors = FALSE)
+```
 
 
 ### Export data by event
 
+```{r}
+# remind yourself on events
+events
+
+# export baseline event
+baseline <- exportRecords(rcon = redcap_conn, factors = TRUE, 
+                          fields = NULL,  forms = NULL, records = NULL, 
+                          events = "baseline_arm_1",
+                          labels = TRUE, dates = TRUE, 
+                          survey = TRUE, dag = TRUE,  
+                          checkboxLabels = FALSE)
+# clean columns
+baseline <-  baseline[, colSums(is.na(baseline)) < nrow(baseline)] ## exclude NA filled columns
+
+
+# export month 3 data
+month_3 <- exportRecords(rcon = redcap_conn, factors = TRUE, 
+                          fields = NULL,  forms = NULL, records = NULL, 
+                          events = "month_3_arm_1",
+                          labels = TRUE, dates = TRUE, 
+                          survey = TRUE, dag = TRUE,  
+                          checkboxLabels = FALSE)
+# clean columns
+month_3 <-  month_3[, colSums(is.na(month_3)) < nrow(month_3)] ## exclude NA filled columns
+
+# export month 6 data
+month_6 <- exportRecords(rcon = redcap_conn, factors = TRUE, 
+                          fields = NULL,  forms = NULL, records = NULL, 
+                          events = "month_6_arm_1",
+                          labels = TRUE, dates = TRUE, 
+                          survey = TRUE, dag = TRUE,  
+                          checkboxLabels = FALSE)
+# clean columns
+month_6 <-  month_6[, colSums(is.na(month_6)) < nrow(month_6)] ## exclude NA filled columns
+
+# export study exit
+study_exit <- exportRecords(rcon = redcap_conn, factors = TRUE, 
+                          fields = NULL,  forms = NULL, records = NULL, 
+                          events = "study_end_arm_1",
+                          labels = TRUE, dates = TRUE, 
+                          survey = TRUE, dag = TRUE,  
+                          checkboxLabels = FALSE)
+# clean columns
+study_exit <-  study_exit[, colSums(is.na(study_exit)) < nrow(study_exit)] ## exclude NA filled columns
+
+# merge/join by subjid
+redcap_clinical_data <- reduce(
+  list(baseline,
+       month_3,
+       month_6,
+       study_exit),
+  left_join,
+  by = "record_id"
+)
+
+```
 
 
 ### Export data by instrument/form
 
+```{r}
+# Try this at your free time and check how it compares with the previous methods.
+
+```
 
 
+### Have fun playing around with the database
+
+```{r}
+# Have fun trying out new combination of extracting instruments and events
+
+```
 
 
 
