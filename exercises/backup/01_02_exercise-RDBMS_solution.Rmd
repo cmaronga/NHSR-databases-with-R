@@ -48,7 +48,14 @@ We have set-up 3 `MySQL` databases for use in this exercise and subsequent exerc
 Load packages you need to connect, extract and wrangle data from your databases
 
 ```{r}
-# loading packages
+# load packages
+library(DBI)        # Main database interface for R
+library(dbplyr)     # Handles dplyr translation to SQL
+library(tidyverse)  # tidyverse world of package (including dplyr, ggplot2, etc.)
+library(RSQLite)    # DBI back-end package for connecting to SQLite
+library(odbc)       # DBI back-end  to connect to most RDBMS & SQL server
+library(RMySQL)     # DBI back-end package for connecting to MySQL
+library(redcapAPI)  # Connecting to REDCap database
 ```
 
 
@@ -59,14 +66,56 @@ Load packages you need to connect, extract and wrangle data from your databases
 
 ### Using an `odbc` driver
 
+```{r}
+# Task : Connect to `nycflights13` MySQL database;
+
+# (i) Use an `odbc` driver, name the connection `nyc_odbc.conn`
+# Hint: 
+sort(unique(odbcListDrivers()[[1]])) # Run this to see available odbc drivers
+
+
+# establishing a database connection
+nyc_odbc.conn <- dbConnect(odbc(),                                       # Open a database connection
+                             Driver = "MySQL ODBC 8.0 Unicode Driver",   # Specify driver name (), for 
+                             Server = "nhsr-conference.cjmn9gy7nffs.us-east-1.rds.amazonaws.com",   # Server address
+                             Database = "nycflights13",               # Database name
+                             Uid = "user",                            # User identification
+                             Pwd = "user" )
+
+
+```
+
 
 
 ### Using a `DBI` backend package
 
+```{r}
+# (ii) Use a `DBI` backend package for MySQL, name the connection `nyc_dbi.conn`
+
+nyc_dbi.conn <- dbConnect(MySQL(),  # DBI compliant driver for MySQL db
+                       host = "nhsr-conference.cjmn9gy7nffs.us-east-1.rds.amazonaws.com",     # host name/server address
+                       dbname = "nycflights13",   # database name
+                       user = "user",     # user name
+                       password = "user") # password
+```
 
 
 ### Exploring using the connections
 
+```{r}
+# (iii) Explore the connection(s)
+
+# How many tables are in the connection `nyc_odbc.conn`?
+dbListTables(conn = nyc_odbc.conn)
+
+
+# How many tables are in the connection `nyc_dbi.conn`?
+dbListTables(conn = nyc_dbi.conn)
+
+## Using either of the database connections above, how many variables are in table airports table?(tbl_airports)
+dbListFields(conn = nyc_odbc.conn, "tbl_airports")
+
+```
 
 
 
@@ -75,6 +124,41 @@ Load packages you need to connect, extract and wrangle data from your databases
 
 
 ### Using `DBI` functions
+
+Use the combination of `dbSendQuery()` to execute a SQL query in the database and return some results. Followed by the function `dbFetch()` to fetch the results returned in step 1 into actual data in memory
+
+```{r}
+# establishing a connection with the database
+nhsr_db.conn <- dbConnect(MySQL(),  
+                       host = "nhsr-conference.cjmn9gy7nffs.us-east-1.rds.amazonaws.com",
+                       dbname = "nhsr_conference",   
+                       user = "user",   
+                       password = "user") 
+
+# Step 1
+qry_results <- dbSendQuery(conn = nhsr_db.conn,
+            statement = "SELECT * FROM tbl_clinical")
+
+# Step 2
+clinical_opt1 <- dbFetch(res = qry_results)
+
+```
+
+
+```{r}
+# (b) use dbGetQuery() to execute the SQL above (i) and assign to `clinical_opt2`
+## NOTE: this is equivalent to using the function dbReadTable()
+
+clinical_opt2 <- dbGetQuery(conn = nhsr_db.conn,
+                            statement = "SELECT * FROM tbl_clinical")
+
+# also
+# clinical_opt2 <- dbReadTable(conn = nhsr_db.conn, 
+#                              "tbl_clinical")  # specify table name
+
+```
+
+
 
 
 
