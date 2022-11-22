@@ -56,6 +56,15 @@ class: title-slide, left, bottom
 ### `r rmarkdown::metadata$author`
 ### `r rmarkdown::metadata$institute`
 
+---
+class: title, center, middle
+
+## Quick poll: Have you worked with Relational Database(s) before? 
+
+## Which one(s)
+
+
+
 
 ---
 class: title, left
@@ -191,6 +200,12 @@ connection_name <- dbConnect(MySQL(),  # DBI compliant driver for MySQL db #<<
 ```
 
 
+---
+class: title, center, middle
+
+## Exercise 1 and Break
+
+
 
 ---
 class: title, left
@@ -259,6 +274,11 @@ WHERE hb <= 18 AND sex = 1
 ```
 ````
 
+---
+class: title, center, middle
+
+## Exercise 2 and Break
+
 
 ---
 class: title, center, middle
@@ -276,6 +296,11 @@ session_two <- tribble(
 session_two %>% kbl() %>% 
   kable_styling()
 ```
+
+---
+class: title, center, middle
+
+## Quick poll: Have you ever worked with REDCap database before?
 
 
 
@@ -335,6 +360,11 @@ baseline <- exportRecords(rcon = connection_name, factors = TRUE, fields = NULL,
 baseline <- exportRecords(rcon = connection_name, factors = TRUE, fields = NULL,  forms = "instrument_name", records = NULL, events = NULL,
                           labels = TRUE, dates = TRUE, survey = TRUE, dag = TRUE,  checkboxLabels = FALSE)
 ```
+
+---
+class: title, center, middle
+
+## Exercise 3 and Break
 
 
 ---
