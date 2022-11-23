@@ -313,6 +313,16 @@ class: title, left
 ```{r, out.width ="100%",fig.align ='left', out.height = "20%", echo = F, eval=TRUE}
 knitr::include_graphics("redcap_logo.png")
 ```
+<br>
+```{r, out.width ="150%",fig.align ='left', out.height = "20%", echo = F, eval=TRUE}
+knitr::include_graphics("redcap_logo2.png")
+```
+
+<br>
+```{r, out.width ="150%",fig.align ='left', out.height = "20%", echo = F, eval=TRUE}
+knitr::include_graphics("redcap_logo3.png")
+```
+
 
 ]
 
