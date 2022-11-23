@@ -168,8 +168,9 @@ baseline_stExit <- exportRecords(
 # You will try this in the exercise
 
 
+# Session 3 demo ----------------------------------------------------------
 
-
+file.edit("~/.Renviron")
 
 
 

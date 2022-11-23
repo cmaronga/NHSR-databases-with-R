@@ -57,12 +57,11 @@ class: title-slide, left, bottom
 ### `r rmarkdown::metadata$institute`
 
 ---
-class: title, center, middle
 
-## Quick poll: Have you worked with Relational Database(s) before? 
 
-## Which one(s)
-
+```{r, out.width ="150%",fig.align ='left', out.height = "40%", echo = F, eval=TRUE}
+knitr::include_graphics("about_me_chris.png")
+```
 
 
 
@@ -115,6 +114,15 @@ delivery_mode %>% kbl() %>%
 - SQLite database.
 - Automating data extraction.
 ]
+
+
+---
+class: title, center, middle
+
+## Quick poll: Have you worked with Relational Database(s) before? 
+
+## Which one(s)
+
 
 
 ---
