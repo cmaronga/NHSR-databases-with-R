@@ -209,6 +209,22 @@ connection_name <- dbConnect(MySQL(),  # DBI compliant driver for MySQL db #<<
 
 
 ---
+
+
+```{r, out.width ="90%",fig.align ='left', out.height = "5%", echo = F, eval=TRUE}
+knitr::include_graphics("open_source_dbs.png")
+```
+
+--
+
+```{r, out.width ="90%",fig.align ='left', out.height = "5%", echo = F, eval=TRUE, fig.cap="Credit:RStudio::Solutions"}
+knitr::include_graphics("comercial_dbs.png")
+```
+
+
+
+
+---
 class: title, center, middle
 
 ## Exercise 1 and Break
@@ -281,6 +297,17 @@ SELECT * FROM tbl_lab
 WHERE hb <= 18 AND sex = 1
 ```
 ````
+
+---
+
+class: title, center, middle
+
+## dplyr and database interaction
+
+```{r, out.width ="100%",fig.align ='left', out.height = "20%", echo = F, eval=TRUE, fig.cap="Credit:RStudio::Solutions"}
+knitr::include_graphics("dplyr_and_r.png")
+```
+
 
 ---
 class: title, center, middle
